@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SocialConnect
 
-## Getting Started
+SocialConnect is a modern social media platform that allows users to share posts, connect with others, and engage through real-time interactions.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Post Management**: Create, edit, and delete posts with text and image content (up to 2MB).
+- **Social Interactions**: Like posts, comment on content, and engage in conversations with other users.
+- **Follow System**: Follow and unfollow users to build your personalized feed.
+- **Real-Time Notifications**: Get instant notifications for follows, likes, and comments using WebSocket connections.
+- **User Profiles**: Customizable profiles with avatar, cover image, bio, and user statistics.
+- **Authentication**: Secure sign-up/sign-in with email or username, including password reset functionality.
+- **Admin Dashboard**: Manage users, moderate content, and view platform statistics.
+- **Dark Mode**: Toggle between light and dark themes for comfortable viewing.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technologies Used
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Next.js 16 (App Router)
+- TypeScript
+- Supabase (PostgreSQL + Realtime)
+- Tailwind CSS
+- shadcn/ui
+- Zustand (State Management)
+- React Hook Form
+- Zod (Validation)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Development Setup
 
-## Learn More
+1. Clone the repository:
 
-To learn more about Next.js, take a look at the following resources:
+   ```bash
+   git clone https://github.com/royaals/socialconnect
+   cd socialconnect
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. Install dependencies:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   ```bash
+   npm install
+   ```
 
-## Deploy on Vercel
+3. Set up environment variables:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   Create a `.env.local` file in the root directory and add the following variables:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   ```env
+   NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+   NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+   ```
+
+4. Run the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
+
+## Deployment
+
+To deploy the application, follow the deployment instructions for your preferred hosting platform. Ensure you set the environment variables in your deployment environment.
+
+## Contributing
+
+Contributions are welcome! Please follow the [contribution guidelines](CONTRIBUTING.md) to contribute to this project.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).  

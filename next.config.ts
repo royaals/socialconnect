@@ -12,7 +12,7 @@ const nextConfig = {
       },
     ],
   },
-  // Ignore build errors (NOT RECOMMENDED)
+
   typescript: {
     ignoreBuildErrors: true,
   },
